@@ -35,7 +35,7 @@
 		}
 	},
 	"css": {
-		"parser": { "tailwindDirectives": false },
+		"parser": { "tailwindDirectives": true },
 		"formatter": { "enabled": true, "quoteStyle": "double" }
 	},
 	"html": {
