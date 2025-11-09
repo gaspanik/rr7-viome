@@ -1,61 +1,85 @@
-# Welcome to React Router!
+# React Router 7 + Biome Starter Kit
 
-A modern, production-ready template for building full-stack React applications using React Router.
+モダンでプロダクションレディなReact Router 7スターターキット。Biomeによる高速なリンター・フォーマッター、Lucide Iconsを統合しています。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## ✨ 特徴
 
-## Features
+- ⚡️ **React Router 7** - 最新のフルスタックReactフレームワーク
+- 🔧 **Biome** - 高速なリンター・フォーマッター（ESLint + Prettierの代替）
+- 🎨 **Tailwind CSS v4** - ユーティリティファーストのCSSフレームワーク
+- 🎯 **Lucide React** - 美しいアイコンライブラリ
+- 🚀 **Server-side rendering** - サーバーサイドレンダリング対応
+- ⚡️ **Hot Module Replacement (HMR)** - 高速な開発体験
+- 📦 **Asset bundling and optimization** - 最適化されたビルド
+- 🔄 **Data loading and mutations** - データローディングとミューテーション
+- 🔒 **TypeScript** - 型安全な開発
+- 📦 **pnpm** - 高速で効率的なパッケージマネージャー
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## � ドキュメント
 
-## Getting Started
+- [React Router](https://reactrouter.com/)
+- [Biome](https://biomejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
 
-### Installation
+## 🚀 はじめ方
 
-Install the dependencies:
+### インストール
 
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+依存関係をインストール：
 
 ```bash
-npm run build
+pnpm install
 ```
 
-## Deployment
+### 開発
 
-### Docker Deployment
+開発サーバーを起動：
 
-To build and run using Docker:
+```bash
+pnpm dev
+```
+
+アプリケーションは `http://localhost:5173` で利用可能です。
+
+### コード品質
+
+```bash
+# Biomeでリント
+pnpm lint
+
+# Biomeでフォーマット
+pnpm format
+
+# Biomeでリント・フォーマット・チェック
+pnpm check
+
+# TypeScriptの型チェック
+pnpm typecheck
+```
+
+## 🏗️ プロダクションビルド
+
+プロダクション用ビルドを作成：
+
+```bash
+pnpm build
+```
+
+## 🐳 デプロイ
+
+### Dockerデプロイ
+
+Dockerを使用してビルド・実行：
 
 ```bash
 docker build -t my-app .
 
-# Run the container
+# コンテナを実行
 docker run -p 3000:3000 my-app
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+以下のようなDockerをサポートするプラットフォームにデプロイ可能：
 
 - AWS ECS
 - Google Cloud Run
@@ -64,24 +88,45 @@ The containerized application can be deployed to any platform that supports Dock
 - Fly.io
 - Railway
 
-### DIY Deployment
+### DIYデプロイ
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+Nodeアプリケーションのデプロイに慣れている場合、組み込みのアプリサーバーはプロダクションレディです。
 
-Make sure to deploy the output of `npm run build`
+`pnpm build` の出力をデプロイしてください：
 
 ```
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── pnpm-lock.yaml
 ├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+│   ├── client/    # 静的アセット
+│   └── server/    # サーバーサイドコード
 ```
 
-## Styling
+## 🎨 スタイリング
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+このテンプレートには[Tailwind CSS v4](https://tailwindcss.com/)があらかじめ設定されています。お好みのCSSフレームワークを使用することもできます。
+
+## 📦 含まれるパッケージ
+
+### 依存関係
+- `react` & `react-dom` - React 19
+- `react-router` - React Router 7
+- `@react-router/node` & `@react-router/serve` - React Routerサーバー
+- `lucide-react` - アイコンライブラリ
+- `isbot` - ボット検出
+
+### 開発依存関係
+- `@biomejs/biome` - リンター・フォーマッター
+- `@react-router/dev` - React Router開発ツール
+- `tailwindcss` & `@tailwindcss/vite` - Tailwind CSS v4
+- `typescript` - TypeScript
+- `vite` - ビルドツール
+- `vite-tsconfig-paths` - TypeScriptパスエイリアス
+
+## 📝 ライセンス
+
+MIT
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router, Biome, and Lucide Icons.
